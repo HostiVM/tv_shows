@@ -18,10 +18,8 @@ module TvRage
     end
 
     def save_new_shows
-      Show.transaction do
-        tv_rage_shows.each do |tv_rage_show|
-          Show.create! params(tv_rage_show) unless already_saved?(tv_rage_show['id'].to_i)
-        end
+      tv_rage_shows.each do |tv_rage_show|
+        Show.create! params(tv_rage_show) unless already_saved?(tv_rage_show['id'].to_i)
       end
     end
 
