@@ -51,3 +51,4 @@ group :development do
 end
 
 gem 'sofa'
+gem 'arel'
