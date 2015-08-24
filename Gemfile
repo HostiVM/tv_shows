@@ -52,3 +52,4 @@ end
 
 gem 'sofa'
 gem 'arel'
+gem 'simple_calendar', '~> 1.1.0'

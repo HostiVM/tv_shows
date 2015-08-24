@@ -1,4 +1,8 @@
 class Event < ActiveRecord::Base
+  extend SimpleCalendar
+
+  has_calendar attribute: :release
+
   belongs_to :show
 
   default_scope do

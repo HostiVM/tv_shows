@@ -1,2 +1,9 @@
 %h2
-  Easy start by Hosti
+  TV shows schedule
+
+= month_calendar events: upcoming_episodes do |date, upcoming_episodes|
+  = date.strftime("%d. %m.")
+
+  - upcoming_episodes.each do |episode|
+    %div
+      = episode.show.name
