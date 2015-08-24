@@ -1,6 +1,6 @@
 module TvRage
   module Events
-    class ScheduleService
+    class UpdateDatabaseService
       def initialize(full_schedule = FullSchedule.new)
         @full_schedule = full_schedule
       end
