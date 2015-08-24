@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <title><%= content_for?(:title) ? yield(:title) : "Easy start" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "TV shows calendar" %></title>
     <%= csrf_meta_tags %>
 
     <!--[if lt IE 9]>
@@ -50,12 +50,11 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        
-        <h1>Easy start by Hosti</h1>
+
+        <h1>TV shows calendar</h1>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li <%if controller_name == 'static_pages'%>class="active"<% end %>><%= link_to "Index", root_path %></li>
-            <li><%= link_to "Menu item", "#" %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
