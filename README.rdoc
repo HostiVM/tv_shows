@@ -1,16 +1,23 @@
-== README
+== Kickass README
 
 This README would normally document whatever steps are necessary to get the
-application up and running, but for now, I don't give a fuck.
+application up and running, but for now, I don't really give a fuck
+(busy with another, private, project).
 
-However, what this app should work like one day is:
+At this moment, the app is able to keep track of most US TV shows and their recent
+upcoming episodes (on the database level -- having no UI yet).
 
-1) You log in and select your favorite TV shows
+What it should look like one day, is:
 
-2) You will see calendar with new episodes marked
+1) You log in and select your favorite TV shows,
 
-3) You'll get "new episode aired" email alert in an interval you set
+2) then you will see calendar with upcoming episodes marked,
+
+3) then you'll get "new episode aired" email alert in an interval you set,
 
 4) ...
 
-5) Profit
+5) and then it will earn $1.000.000 for me.
+
+If you're interested in my code, I suggest you to check out the app/services/ folder,
+because at this moment (2015-08-24 20:33:34 +0200), there is nothing more to see in this project.
