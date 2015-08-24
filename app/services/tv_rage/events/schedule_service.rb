@@ -21,8 +21,8 @@ module TvRage
       attr_reader :full_schedule
 
       def create_events_for_day(day_events)
-        day_events.each do |event|
-          CreateEventForDayService.new(day_events.day, event).call if is_valid?(event)
+        day_events.events.each do |event|
+          CreateEventService.new(day_events.day, event).call if is_valid?(event)
         end
       end
 

@@ -1,22 +1,22 @@
 module TvRage
   module Shows
     class UpdateDatabaseService
-      def initialize(tv_rage_api = List.new)
-        @tv_rage_api = tv_rage_api
+      def initialize(remote_shows_list = List.new)
+        @remote_shows_list = remote_shows_list
       end
 
       def call
-        save_new_shows if tv_rage_api.new_shows_available?
+        save_new_shows if remote_shows_list.new_shows_available?
       end
 
 
       private
 
-      attr_reader :tv_rage_api
+      attr_reader :remote_shows_list
 
       def save_new_shows
         tv_rage_shows.each do |tv_rage_show|
-          Show.create! tv_rage_show.to_hash unless already_saved?(tv_rage_show.id)
+          Show.create! tv_rage_show.to_hash unless already_exists?(tv_rage_show.id)
         end
       end
 
@@ -24,12 +24,12 @@ module TvRage
         @ids ||= Show.pluck(:tv_rage_id)
       end
 
-      def already_saved?(tv_rage_show_id)
+      def already_exists?(tv_rage_show_id)
         saved_shows_ids.include? tv_rage_show_id
       end
 
       def tv_rage_shows
-        @shows ||= tv_rage_api.shows
+        @shows ||= remote_shows_list.shows
       end
     end
   end

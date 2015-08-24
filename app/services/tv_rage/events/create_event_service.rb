@@ -1,6 +1,6 @@
 module TvRage
   module Events
-    class CreateEventsForDayService
+    class CreateEventService
       def initialize(day, tv_rage_event)
         @day, @tv_rage_event = day, tv_rage_event
       end
