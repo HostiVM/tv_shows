@@ -1,28 +1,16 @@
 == README
 
 This README would normally document whatever steps are necessary to get the
-application up and running.
+application up and running, but for now, I don't give a fuck.
 
-Things you may want to cover:
+However, what this app should work like one day is:
 
-* Ruby version
+1) You log in and select your favorite TV shows
 
-* System dependencies
+2) You will see calendar with new episodes marked
 
-* Configuration
+3) You'll get "new episode aired" email alert in an interval you set
 
-* Database creation
+4) ...
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+5) Profit
