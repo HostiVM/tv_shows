@@ -1,6 +1,7 @@
 %h2
   Upcoming episodes
 
-= render 'calendar'
+- unless current_user.shows.blank?
+  = render 'calendar'
 
 = render 'shows'

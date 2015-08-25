@@ -1,10 +1,10 @@
 %h3
-  My shows
+  = current_user.shows.present? ? 'My shows' : 'Step 1: find your favorite shows'
 
 = simple_form_for current_user, url: edit_shows_path do |f|
   = f.association :shows,
                   label: false,
-                  collection: Show.active,
+                  collection: Show.active.alphabetically,
                   input_html: { class: 'chosen-select' }
 
-  = f.button :submit, 'Update', class: 'btn-primary btn-large'
+  = f.button :submit, 'Save', class: 'btn-primary btn-large'

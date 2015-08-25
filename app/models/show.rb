@@ -13,6 +13,10 @@ class Show < ActiveRecord::Base
     where status: ["1", "9", "10"]
   end
 
+  scope :alphabetically, -> do
+    order :name
+  end
+
   def self.search(show_name)
     TvRage::Shows::SearchService.new(show_name).call
   end
