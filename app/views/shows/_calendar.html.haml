@@ -5,11 +5,11 @@
   = month_calendar events: upcoming_episodes do |date, upcoming_episodes|
     - if date > Date.today
       %strong
-        = date.strftime("%d. %m.")
+        = date.strftime("%d/%m")
 
     - else
-      = date.strftime("%d. %m.")
+      = date.strftime("%d/%m")
 
     - upcoming_episodes.each do |episode|
       %div
-        = episode.show.name
+        = "#{episode.show.name} (#{episode.release.strftime("%H:%M")})"
