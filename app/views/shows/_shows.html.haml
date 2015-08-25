@@ -1,7 +1,10 @@
 %h3
   My shows
 
-%ul
-  - current_user.shows.each do |show|
-    %li
-      = show.name
+= simple_form_for current_user, url: edit_shows_path do |f|
+  = f.association :shows,
+                  label: false,
+                  collection: Show.active,
+                  input_html: { class: 'chosen-select' }
+
+  = f.button :submit, 'Update', class: 'btn-primary btn-large'

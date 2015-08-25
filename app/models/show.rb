@@ -9,6 +9,10 @@ class Show < ActiveRecord::Base
   has_many :users,
            through: :show_user_assignments
 
+  scope :active, -> do
+    where status: ["1", "9", "10"]
+  end
+
   def self.search(show_name)
     TvRage::Shows::SearchService.new(show_name).call
   end

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'shows#index'
 
-  devise_for :users
+  resource :shows
+  patch 'shows/edit'
 end
