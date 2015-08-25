@@ -1,25 +1,26 @@
 == Kickass README
 
-This README would normally document whatever steps are necessary to get the
-application up and running, but for now, I don't really give a fuck
-(busy with another, private, project).
+At this moment, the app is able to keep track of most TV shows and their recent
+upcoming episodes.
 
-At this moment, the app is able to keep track of most US TV shows and their recent
-upcoming episodes (on the database level -- having almost no UI yet).
+=== What it should look like one day, is:
 
-What it should look like one day, is:
+1) You log in and select your favorite TV shows (DONE),
 
-1) You log in and select your favorite TV shows,
+2) you will see calendar with upcoming episodes marked (shitty design, but DONE),
 
-2) then you will see calendar with upcoming episodes marked,
+3) you'll get "new episode aired" email alert in an interval you set (WORK IN PROGRESS),
 
-3) then you'll get "new episode aired" email alert in an interval you set,
+4) ... (WORK IN PROGRESS)
 
-4) ...
+5) it will earn $1.000.000 for me (WORK IN PROGRESS).
 
-5) and then it will earn $1.000.000 for me.
+=== What it looks like right now, is:
 
-If you're interested in my code, I suggest you to check out the app/services/ folder,
-because at this moment (2015-08-24 20:33:34 +0200), there is nothing more to see in this project.
+...stay in touch, gonna deploy it to Heroku in a few days.
 
-I know controllers, views etc. suck, will do them properly later.
+For now, the most important code is in the app/services folder.
+I'm fully aware that controllers, views etc. code really, really, really sucks,
+but I don't give a fuck at this moment.
+
+Actualy, check out issues and feel free to contribute; it's all in there :-).
