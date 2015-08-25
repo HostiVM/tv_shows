@@ -1,0 +1,7 @@
+%h3
+  My shows
+
+%ul
+  - current_user.shows.each do |show|
+    %li
+      = show.name

@@ -52,12 +52,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
 
         <h1>TV shows calendar</h1>
+        <!--
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li <%if controller_name == 'static_pages'%>class="active"<% end %>><%= link_to "Home", root_path %></li>
+            <li <%if controller_name == 'shows'%>class="active"<% end %>><%= link_to "Home", root_path %></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div>
+        </div>
+      </div> -->
     </nav>
 
     <div class="container">
@@ -70,9 +71,6 @@
         <div class="col-md-3">
           <nav class="nav-sidebar navbar-fixed">
             <ul class="nav">
-              <li><%= link_to 'Menu item', '#' %></li>
-                  <li><%= link_to 'Menu item', '#' %></li>
-                  <li class="nav-divider"></li>
               <li><%= link_to '#', :method => :delete do %><i class="glyphicon glyphicon-off"></i> Logout<% end %></li>
             </ul>
           </nav>
