@@ -3,7 +3,12 @@
 
 #calendar-overview
   = month_calendar events: upcoming_episodes do |date, upcoming_episodes|
-    = date.strftime("%d. %m.")
+    - if date > Date.today
+      %strong
+        = date.strftime("%d. %m.")
+
+    - else
+      = date.strftime("%d. %m.")
 
     - upcoming_episodes.each do |episode|
       %div
