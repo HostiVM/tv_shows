@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   expose :upcoming_episodes do
-    Event.upcoming
+    current_user.upcoming_episodes
   end
 
   def index

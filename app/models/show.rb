@@ -3,6 +3,12 @@ class Show < ActiveRecord::Base
            class_name: Event,
            dependent: :destroy
 
+  has_many :show_user_assignments,
+           dependent: :destroy
+
+  has_many :users,
+           through: :show_user_assignments
+
   def self.search(show_name)
     TvRage::Shows::SearchService.new(show_name).call
   end
