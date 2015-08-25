@@ -5,7 +5,7 @@ application up and running, but for now, I don't really give a fuck
 (busy with another, private, project).
 
 At this moment, the app is able to keep track of most US TV shows and their recent
-upcoming episodes (on the database level -- having no UI yet).
+upcoming episodes (on the database level -- having almost no UI yet).
 
 What it should look like one day, is:
 
@@ -21,3 +21,5 @@ What it should look like one day, is:
 
 If you're interested in my code, I suggest you to check out the app/services/ folder,
 because at this moment (2015-08-24 20:33:34 +0200), there is nothing more to see in this project.
+
+I know controllers, views etc. suck, will do them properly later.
