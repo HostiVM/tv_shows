@@ -1,4 +1,6 @@
 class Show < ActiveRecord::Base
+  self.primary_key = 'tv_rage_id'
+
   has_many :upcoming_episodes,
            class_name: Event,
            dependent: :destroy

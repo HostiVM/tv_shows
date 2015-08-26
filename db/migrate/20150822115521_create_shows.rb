@@ -1,10 +1,8 @@
 class CreateShows < ActiveRecord::Migration
   def change
-    create_table :shows do |t|
+    create_table :shows, primary_key: 'tv_rage_id' do |t|
       t.string :name
-      t.string :czech_name
-      t.integer :status
-      t.integer :tv_rage_id
+      t.string :status
     end
   end
 end
