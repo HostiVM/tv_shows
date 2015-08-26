@@ -24,12 +24,9 @@ ActiveRecord::Schema.define(version: 20150826164637) do
     t.integer "user_id"
   end
 
-  create_table "shows", force: true do |t|
-    t.string  "name"
-    t.string  "czech_name"
-    t.string  "status"
-    t.integer "tv_rage_id"
-    t.boolean "ended"
+  create_table "shows", primary_key: "tv_rage_id", force: true do |t|
+    t.string "name"
+    t.string "status"
   end
 
   create_table "users", force: true do |t|
