@@ -6,7 +6,7 @@ module TvRage
       end
 
       def call
-        save_new_shows if remote_shows_list.new_shows_available?
+        recreate_shows if remote_shows_list.differs_from_database?
       end
 
 
@@ -14,22 +14,16 @@ module TvRage
 
       attr_reader :remote_shows_list
 
-      def save_new_shows
-        tv_rage_shows.each do |tv_rage_show|
-          Show.create! tv_rage_show.to_hash unless already_exists?(tv_rage_show.id)
+      def recreate_shows
+        Show.transaction do
+          Show.delete_all
+
+          remote_shows_list.shows.each do |tv_rage_show|
+            Show.create! tv_rage_show.to_hash
+          end
+
+          remote_shows_list.save_sync_info
         end
-      end
-
-      def saved_shows_ids
-        @ids ||= Show.pluck(:tv_rage_id)
-      end
-
-      def already_exists?(tv_rage_show_id)
-        saved_shows_ids.include? tv_rage_show_id
-      end
-
-      def tv_rage_shows
-        @shows ||= remote_shows_list.shows
       end
     end
   end
