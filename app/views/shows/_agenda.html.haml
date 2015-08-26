@@ -1,0 +1,7 @@
+%h3
+  Nearest episodes
+
+%ul
+  - upcoming_episodes.limit(3).each do |episode|
+    %li
+      = "#{episode.name} (#{episode.release.strftime('%d/%m')})"
