@@ -21,7 +21,8 @@ module TvRage
       def params(show)
         {
             show_id: show_id(show),
-            release: release
+            release: release,
+            name: name(show)
         }
       end
 
@@ -30,6 +31,10 @@ module TvRage
         show = Show.find_by(tv_rage_id: tv_rage_id)
 
         show && show.id
+      end
+
+      def name(show)
+        show['name'] << ' ' << show['ep'].to_s
       end
 
       def release
