@@ -15,12 +15,9 @@ upcoming episodes.
 
 5) it will earn $1.000.000 for me (WORK IN PROGRESS).
 
-=== What it looks like right now, is:
+For now, the most important code is in the +app/services+ folder.
+I'm fully aware that controllers and views code really, really sucks,
+but I don't give a fuck at this moment, since I need to finish the core
+functionality.
 
-...stay in touch, gonna deploy it to Heroku in a few days.
-
-For now, the most important code is in the app/services folder.
-I'm fully aware that controllers, views etc. code really, really, really sucks,
-but I don't give a fuck at this moment.
-
-Actualy, check out issues and feel free to contribute; it's all in there :-).
+Actualy, check out issues (and feel free to contribute); it's all in there :-).
