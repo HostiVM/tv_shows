@@ -71,24 +71,13 @@
         <div class="col-md-3">
           <nav class="nav-sidebar navbar-fixed">
             <ul class="nav">
-              <li><%= link_to '#', :method => :delete do %><i class="glyphicon glyphicon-off"></i> Logout<% end %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to destroy_user_session_path, :method => :delete do %><i class="glyphicon glyphicon-off"></i> Logout<% end %></li>
+              <% end %>
             </ul>
           </nav>
         </div>
         <!---->
-        <!--<div class="col-md-3">-->
-          <!--<div class="well sidebar-nav">-->
-            <!--<h3>Uživatel</h3>-->
-            <!--<ul class="nav nav-list">-->
-              <!--<li class="nav-header">-->
-                <!--<% if user_signed_in? %>-->
-                    <!--<%= current_user.email %>-->
-                <!--<% end %>-->
-              <!--</li>-->
-              <!--<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>-->
-            <!--</ul>-->
-          <!--</div>&lt;!&ndash;/.well &ndash;&gt;-->
-        <!--</div>&lt;!&ndash;/span&ndash;&gt;-->
       </div><!--/row-->
 
       <footer>
