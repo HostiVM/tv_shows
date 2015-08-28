@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150826164637) do
+ActiveRecord::Schema.define(version: 20150826194757) do
 
   create_table "events", force: true do |t|
     t.integer  "show_id"
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 20150826164637) do
   create_table "shows", primary_key: "tv_rage_id", force: true do |t|
     t.string "name"
     t.string "status"
+  end
+
+  create_table "tv_rage_syncs", force: true do |t|
+    t.string   "data_type"
+    t.integer  "summary_hash"
+    t.datetime "created_at"
   end
 
   create_table "users", force: true do |t|

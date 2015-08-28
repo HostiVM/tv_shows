@@ -11,14 +11,26 @@ module TvRage
         end
       end
 
-      def new_shows_available?
-        tv_rage_shows.size > Show.all.size
+      def differs_from_database?
+        no_shows_saved? || summary_hashes_differ?
+      end
+
+      def save_sync_info
+        TvRageSync.create data_type: 'show', summary_hash: tv_rage_shows.hash
       end
 
 
       private
 
       attr_reader :tv_rage_shows
+
+      def summary_hashes_differ?
+        TvRageSync.shows.last.summary_hash != tv_rage_shows.hash
+      end
+
+      def no_shows_saved?
+        Show.all.blank?
+      end
     end
   end
 end

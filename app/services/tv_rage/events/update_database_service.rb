@@ -6,19 +6,25 @@ module TvRage
       end
 
       def call
-        Event.transaction do
-          Event.destroy_all
-
-          full_schedule.events_by_days.each do |day_events|
-            create_events_for_day day_events
-          end
-        end
+        recreate_events if full_schedule.differs_from_database?
       end
 
 
       private
 
       attr_reader :full_schedule
+
+      def recreate_events
+        Event.transaction do
+          Event.destroy_all
+
+          full_schedule.events_by_days.each do |day_events|
+            create_events_for_day day_events
+          end
+
+          full_schedule.save_sync_info
+        end
+      end
 
       def create_events_for_day(day_events)
         day_events.events.each do |event|
