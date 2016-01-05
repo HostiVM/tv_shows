@@ -1,10 +1,10 @@
 == README
 
+At this moment, the app is able to keep track of most TV shows and their upcoming episodes.
+
 === Update -- January 2015
 
 Because the TvRage service, which is kind of crucially to this app, is down since september, development has stopped for now.
-
-At this moment, the app is able to keep track of most TV shows and their upcoming episodes.
 
 === What it should look like one day, is:
 
